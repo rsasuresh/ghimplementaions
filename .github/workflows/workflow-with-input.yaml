@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: approve to next environment
-        run: echo "${{github.event.inputs.approver}}
+        run: echo "${{ github.event.inputs.approver }}"
