@@ -1,0 +1,16 @@
+name: handling inputs while running action workflows
+
+on:
+  workflow_dispatch:
+    inputs:
+      approver:
+        description: "person to approve"
+        default: suresh
+        required: true
+
+jobs:
+  approve-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: approve to next environment
+        run: echo "${{github.event.inputs.approver}}
